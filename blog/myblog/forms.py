@@ -4,12 +4,15 @@ from django.contrib.auth import authenticate
 
 
 class SigUpForm(forms.Form):
+    """ Форма регистрации """
+
     username = forms.CharField(
         max_length=100,
         required=True,
-        widget=forms.TextInput(attrs={'class': "form-control",
-                                      'id': "inputUsername",
-                                      })
+        widget=forms.TextInput(attrs={
+            'class': "form-control",
+            'id': "inputUsername",
+        })
     )
 
     password = forms.CharField(
@@ -47,6 +50,8 @@ class SigUpForm(forms.Form):
         return auth
 
 class SignInForm(forms.Form):
+    """ Форма входа """
+
     username = forms.CharField(
         max_length=100,
         required=True,
@@ -64,6 +69,8 @@ class SignInForm(forms.Form):
     )
 
 class FeedBackForm(forms.Form):
+    """ Форма обратной связи клиента """
+
     name = forms.CharField(
         max_length=100,
         widget=forms.TextInput(attrs={

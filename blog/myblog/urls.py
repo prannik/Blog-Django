@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import MainView, PostDetailView, SignUpView, SignInView, FeedBackView, SuccessView,\
-    SearchResultView
+    SearchResultView, TagView
 from django.contrib.auth.views import LogoutView
 
 
@@ -13,4 +13,5 @@ urlpatterns = [
     path('contact/', FeedBackView.as_view(), name='contact'),
     path('contact/success/', SuccessView.as_view(), name='success'),
     path('search/', SearchResultView.as_view(), name='search_results'),
+    path('tag/<slug:slug>', TagView.as_view(), name='tag'),
 ]
