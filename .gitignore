@@ -2,3 +2,5 @@
 myvenv
 __pycache__
 setenv.sh
+media
+db.sqlite3
